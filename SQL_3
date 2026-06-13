@@ -1,8 +1,0 @@
-SELECT
-    city,
-    COUNT(*) AS total_stores,
-    SUM(is_active) AS active_stores,
-    ROUND(SUM(is_active) * 1.0 / COUNT(*), 2) AS active_ratio
-FROM stores
-GROUP BY city
-ORDER BY active_ratio DESC;
